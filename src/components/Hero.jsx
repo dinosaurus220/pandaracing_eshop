@@ -49,13 +49,13 @@ const Hero = () => {
           onClick={slideLeft}
           className="absolute top-1/2 left-10 transform -translate-y-1/2 -translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
         >
-          <ArrowNarrowLeftIcon className="h-6 w-6" />
+          <ArrowNarrowLeftIcon className="-z-10 h-6 w-6" />
         </button>
         <button
           onClick={slideRight}
           className="transition ease-in 3s absolute top-1/2 right-10 transform -translate-y-1/2 translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
         >
-          <ArrowNarrowRightIcon className="h-6 w-6" />
+          <ArrowNarrowRightIcon className="-z-10 h-6 w-6" />
         </button>
       </div>
     </div>
