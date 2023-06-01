@@ -23,42 +23,47 @@ const Hero = () => {
   };
 
   return (
-    <div className={`h-screen`}>
-      <div className={`${styles.flexCenter} flex  w-full`}>
-        <div className="flex overflow-x-hidden">
-          {clonedLinks.slice(activeIndex, activeIndex + 4).map((slideLink) => ( // Update to use clonedLinks
-            <div key={slideLink.id} className="w-full h-screen md:w-1/4 p-2">
-              <div className="bg-white rounded-md shadow-md overflow-hidden">
-                <img
-                  src={slideLink.img}
-                  alt={slideLink.title}
-                  className="w-[500px] h-[600px] object-cover"
-                />
-                <div className="px-4 py-2">
-                  <h3 className="text-lg font-semibold mb-1">
-                    {slideLink.title}
-                  </h3>
-                  <p className="text-gray-600">{slideLink.description}</p>
-                </div>
+<div className={`h-screen`}>
+  <div className={`${styles.flexCenter} flex  w-full`}>
+    <div className="flex overflow-x-hidden">
+      {clonedLinks.slice(activeIndex, activeIndex + 4).map((slideLink) => (
+        <div key={slideLink.id} className="w-full h-screen md:w-1/4 p-0">
+          <div className="relative aspect-w-3 aspect-h-4">
+            <img
+              src={slideLink.img}
+              alt={slideLink.title}
+              className="w-[500px] h-[100vh] object-cover filter blur-[4px]"
+              
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <a href={slideLink.id} className="text-[25px] text-white font-semibold mb-1">
+                  {slideLink.title}
+                </a>
+               {/*  <p className="text-gray-600">{slideLink.description}</p> */}
               </div>
             </div>
-          ))}
+          </div>
         </div>
-
-        <button
-          onClick={slideLeft}
-          className="absolute top-1/2 left-10 transform -translate-y-1/2 -translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
-        >
-          <ArrowNarrowLeftIcon className="-z-50 h-6 w-6" />
-        </button>
-        <button
-          onClick={slideRight}
-          className="transition ease-in 3s absolute top-1/2 right-10 transform -translate-y-1/2 translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
-        >
-          <ArrowNarrowRightIcon className="-z-50 h-6 w-6" />
-        </button>
-      </div>
+      ))}
     </div>
+
+    <button
+      onClick={slideLeft}
+      className="absolute top-1/2 left-10 transform -translate-y-1/2 -translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
+    >
+      <ArrowNarrowLeftIcon className="-z-50 h-6 w-6" />
+    </button>
+    <button
+      onClick={slideRight}
+      className="transition ease-in 3s absolute top-1/2 right-10 transform -translate-y-1/2 translate-x-4 bg-gray-800 text-white p-2 rounded-full focus:outline-none hover:bg-gray-700"
+    >
+      <ArrowNarrowRightIcon className="-z-50 h-6 w-6" />
+    </button>
+  </div>
+</div>
+
+
   );
 };
 

@@ -7,16 +7,14 @@ function App() {
   return (
     <Router>
       <div>
-        <div className="w-full overflow-hidden align-center scroll-mt-[60px]">
+        <div className={`w-full overflow-hidden align-center scroll-mt-[60px] `}>
           <Navbar />
         </div>
-        <div
-          className={`pt-10 w-full overflow-hidden align-center ${styles.flexStart}`}
-        >
-          <div className={`h-screen ${styles.boxWidth} `}>
+        <div className={`pt-10 w-full overflow-y-auto align-center ${styles.flexStart} ${styles.contentContainer}`}>
+          <div className={`h-screen ${styles.boxWidth} mt-8`}>
             <Routes>
-              <Route exact path="/" Component={ Hero } />
-              <Route exact path="/engine-system" Component={ Engine } />
+              <Route exact path="/" Component={Hero} />
+              <Route exact path="/engine-system" Component={Engine} />
             </Routes>
           </div>
         </div>
