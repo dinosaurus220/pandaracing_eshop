@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full flex justify-between py-3 ${styles.navBg} ${
+      className={`z-50 fixed w-full flex justify-between py-3 ${styles.navBg} ${
         height ? "transition ease-in delay-200 h-[70px]" : "h-[120px]"
       }`}
     >
@@ -40,38 +40,49 @@ const Navbar = () => {
       </div>
 
       <div className={`flex justify-center items-center py-5`}>
+        <a href="/">
         <img
           src={Logo}
           alt="Logo"
           className={` ${height ? "h-[60px]" : "h-[100px]"}`}
-        />
+        /></a>
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-gray-900 w-[350px] bg-opacity-75 transition-all duration-500 transform ${
+        className={`fixed top-0 left-0  h-full bg-gray-900 w-[350px] bg-opacity-75 transition-all duration-500 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } z-100`}
-      > 
-      <div className="text-white text-[32px]">
-        {slideLinks.map((nav, index) => (
-          <li key={nav.id}>
-            <a href={`${nav.id}`}>{nav.title}</a>
-          </li>
-        ))}
-      </div>
-<div className="">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="white" onClick={toggleNav} viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-</svg>
-</div>
-
-
-      
+      >
+        <div className="pt-5 flex justify-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="white"
+            onClick={toggleNav}
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            class="w-8 h-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+        <div className="px-5 mt-5 text-white text-[32px]">
+          <ul>
+            {slideLinks.map((nav, index) => (
+              <li key={nav.id}>
+                <a href={`${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className={`${styles.flexCenter}`}>
         <div className={``}>
           <ul className="flex list-none gap gap-4 pr-5  items-center text-white">
-            
             {navLinks.map((nav, index) => (
               <li key={nav.id} className="">
                 <a href={`${nav.id}`}>{nav.title}</a>

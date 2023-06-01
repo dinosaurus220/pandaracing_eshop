@@ -13,7 +13,7 @@ function Footer() {
       </div>
 
       <h1 className={`flex justify-center text-[#52D6F4]`}>
-        © Copyright by kokotracing.eu
+        © Copyright by pandaracing.eu
       </h1>
     </div>
   );
