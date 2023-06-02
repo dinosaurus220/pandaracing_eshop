@@ -32,13 +32,13 @@ const Hero = () => {
             <img
               src={slideLink.img}
               alt={slideLink.title}
-              className="w-[500px] h-[100vh] object-cover filter blur-[4px]"
+              className="w-[500px] h-[100vh] object-cover filter blur-[8px]"
               
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <a href={slideLink.id} className="text-[25px] text-white font-semibold mb-1">
-                  {slideLink.title}
+                  <img src={slideLink.header}></img>
                 </a>
                {/*  <p className="text-gray-600">{slideLink.description}</p> */}
               </div>

@@ -30,52 +30,62 @@ export const slideLinks = [
     id: "engine-system",
     title: "MOTOROVÝ SYSTÉM",
     img: "../src/assets/Hero/engine-system.jpg",
+    header: "../src/assets/headers/engine-system.png"
 
   },
   {
     id: "chassis",
     title: "PODVOZEK",
     img: "../src/assets/Hero/chassis.jpg",
+    header: "../src/assets/headers/podvozek.png"
   },
   {
     id: "wheels-and-spacers",
     title: "DISKY A PODLOŽKY",
     img: "../src/assets/Hero/wheels-and-spacers.jpg",
+    header: "../src/assets/headers/disky.png"
   },
   {
     id: "brakes",
     title: "BRZDY",
     img: "../src/assets/Hero/brakes.jpg",
+    header: "../src/assets/headers/brzdy.png"
   },
   {
     id: "interior-and-safety",
     title: "INTERIÉR A BEZPEČNOST",
     img: "../src/assets/Hero/interior-and-safety.jpg",
+    header: "../src/assets/headers/interier.png"
   },
   {
     id: "exterior",
     title: "EXTERIÉR",
     img: "../src/assets/Hero/exterior.jpg",
+    header: "../src/assets/headers/exterier.png"
   },
   {
     id: "electronics",
     title: "ELEKTRONIKA",
     img: "../src/assets/Hero/electronics.jpg",
+    header: "../src/assets/headers/elektronika.png"
   },
   {
     id: "transmission",
     title: "PŘEVODOVÉ ÚSTROJÍ",
     img: "../src/assets/Hero/transmission.jpg",
+    header: "../src/assets/headers/prevodovka.png"
   },
   {
     id: "exhaust-systems",
     title: "VÝFUKOVÉ SOUSTAVY",
     img: "../src/assets/Hero/exhaust-systems.jpg",
+    header: "../src/assets/headers/vyfuk.png"
   },
   {
     id: "car-cosmetics",
     title: "AUTOKOSMETIKA",
     img: "../src/assets/Hero/car-cosmetics.jpg",
+    header: "../src/assets/headers/autokosmetika.png"
   },
 ];
 
