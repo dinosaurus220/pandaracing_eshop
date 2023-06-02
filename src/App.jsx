@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Navbar, Hero, Footer, Engine } from "./components";
+import { Navbar, Hero, Footer, Engine, Chassis, Brakes, Spacers } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styles from "./style";
 
@@ -15,6 +15,11 @@ function App() {
             <Routes>
               <Route exact path="/" Component={Hero} />
               <Route exact path="/engine-system" Component={Engine} />
+              <Route exact path="/chassis" Component={Chassis} />
+              <Route exact path="/brakes" Component={Brakes} />
+              <Route exact path="/wheels-and-spacers" Component={Spacers} />
+
+
             </Routes>
           </div>
         </div>
