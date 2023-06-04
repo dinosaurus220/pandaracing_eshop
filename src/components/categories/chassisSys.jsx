@@ -1,10 +1,14 @@
 import React from "react";
-import { chassisLinks} from "../../constants";
+import { chassisLinks } from "../../constants";
 
-function chassisSys() {
+function ChassisSys() {
+  const handleAddToCart = (product) => {
+    // Implement the logic to add the product to the cart
+    console.log("Product added to cart:", product);
+  };
+
   return (
     <div className="flex justify-center mt-[70px]">
-   
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {chassisLinks.map((product) => (
           <div
@@ -20,7 +24,7 @@ function chassisSys() {
               <div className="font-bold text-xl mb-2">{product.nazev}</div>
               <p className="text-gray-700 text-base">{product.popis}</p>
             </div>
-            <div className=" px-6 py-4">
+            <div className="px-6 py-4">
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                 {product.kategorie}
               </span>
@@ -28,8 +32,16 @@ function chassisSys() {
                 {product.znacka}
               </span>
               <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
-                {product.cena} 
+                {product.cena}
               </span>
+            </div>
+            <div className="px-6 py-4">
+              <button
+                onClick={() => handleAddToCart(product)}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Přidat do košíku
+              </button>
             </div>
           </div>
         ))}
@@ -38,4 +50,4 @@ function chassisSys() {
   );
 }
 
-export default chassisSys;
+export default ChassisSys;

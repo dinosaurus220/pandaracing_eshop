@@ -1,7 +1,7 @@
 import React from "react";
-import { engineLinks} from "../../constants";
+import { electronicsLinks} from "../../constants";
 
-function EngineSys() {
+function ElectronicsSys() {
   const handleAddToCart = (product) => {
     // Implement the logic to add the product to the cart
     console.log("Product added to cart:", product);
@@ -10,7 +10,7 @@ function EngineSys() {
   return (
     <div className="flex justify-center mt-[70px]">
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {engineLinks.map((product) => (
+        {electronicsLinks.map((product) => (
           <div
             key={product.id}
             className="max-w-xs rounded overflow-hidden shadow-lg bg-white"
@@ -18,7 +18,7 @@ function EngineSys() {
             <img
               className="w-full h-40 object-cover"
               src={product.img}
-              alt="Engine Part"
+              alt="Electronics Part"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">{product.nazev}</div>
@@ -50,4 +50,4 @@ function EngineSys() {
   );
 }
 
-export default EngineSys;
+export default ElectronicsSys;
