@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Logo, Menu } from "../assets";
+import { Logo, Menu, logoNav } from "../assets";
 import { navLinks, slideLinks } from "../constants";
 import styles from "../style";
 
@@ -78,8 +78,11 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          
         </div>
+        <img src={logoNav} className="flex justify-center items-center py-5 flex-grow"></img>
       </div>
+      
       <div className={`${styles.flexCenter}`}>
         <div className={``}>
           <ul className="flex list-none gap gap-4 pr-5  items-center text-white">
@@ -90,6 +93,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+        
       </div>
     </nav>
   );
