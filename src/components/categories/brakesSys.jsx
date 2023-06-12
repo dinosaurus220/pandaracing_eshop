@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
-
+import React from "react";
 import { brakesLinks } from "../../constants";
 
 function BrakesSys() {
+  const handleAddToCart = (product) => {
+    // Implement the logic to add the product to the cart
+    console.log("Product added to cart:", product);
+  };
+
   return (
     <div className="flex justify-center mt-[70px]">
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -45,4 +49,5 @@ function BrakesSys() {
     </div>
   );
 }
+
 export default BrakesSys;

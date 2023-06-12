@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Account from './Account';
 import Error from './Error';
 import BrandCarousel from './BrandCarousel';
-
+import Cart from './Cart';
 import Engine from './categories/engineSys';
 import Chassis from './categories/chassisSys';
 import Brakes from './categories/brakesSys';
@@ -18,6 +18,7 @@ import Cosmetics from './categories/cosmeticsSys';
 
 
 
+
 export {
     Navbar,
     Hero,
@@ -27,6 +28,7 @@ export {
     Chassis,
     Brakes,
     Spacers,
+    Cart,
     Interior,
     Transmission,
     Exterior,
@@ -34,7 +36,7 @@ export {
     Exhaust,
     Cosmetics,
     Error,
-    BrandCarousel
+    BrandCarousel,
 
 
 }

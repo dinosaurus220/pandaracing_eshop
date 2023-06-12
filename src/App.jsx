@@ -1,21 +1,5 @@
 import { useState } from "react";
-import {
-  Navbar,
-  Hero,
-  Footer,
-  Engine,
-  Chassis,
-  Brakes,
-  Spacers,
-  Interior,
-  Transmission,
-  Exterior,
-  Electronics,
-  Exhaust,
-  Cosmetics,
-  Error,
-} from "./components";
-
+import { Navbar, Hero, Footer, Engine, Chassis, Brakes, Spacers, Interior, Transmission, Exterior, Electronics, Exhaust, Cosmetics } from "./components";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import styles from "./style";
 
@@ -23,27 +7,13 @@ function App() {
   return (
     <Router>
       <div>
+        <Navbar />
         <div
-          className={`w-full overflow-hidden align-center scroll-mt-[60px] `}
-        >
-          <Navbar />
-        </div>
-        <div
-          className={`pt-10 w-full overflow-y-auto align-center ${styles.flexStart} ${styles.contentContainer}`}
+          className={`flex flex-col items-center justify-center ${styles.container}`}
         >
           <div className={`h-screen ${styles.boxWidth} mt-8`}>
             <Routes>
-              <Route
-                exact
-                path="/"
-                element={
-                  <>
-                    {" "}
-                    <Hero />{" "}
-                  </>
-                }
-              />
-
+              <Route exact path="/" element={<Hero />} />
               <Route exact path="/engine-system" element={<Engine />} />
               <Route exact path="/chassis" element={<Chassis />} />
               <Route exact path="/brakes" element={<Brakes />} />
