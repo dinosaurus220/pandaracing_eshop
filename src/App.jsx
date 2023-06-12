@@ -33,7 +33,17 @@ function App() {
         >
           <div className={`h-screen ${styles.boxWidth} mt-8`}>
             <Routes>
-              <Route exact path="/" element={<Hero />} />
+              <Route
+                exact
+                path="/"
+                element={
+                  <>
+                    {" "}
+                    <Hero />{" "}
+                  </>
+                }
+              />
+
               <Route exact path="/engine-system" element={<Engine />} />
               <Route exact path="/chassis" element={<Chassis />} />
               <Route exact path="/brakes" element={<Brakes />} />

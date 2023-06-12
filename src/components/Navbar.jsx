@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Logo, Menu, logoNav } from "../assets";
+import { Logo, logoNav } from "../assets";
 import { navLinks, slideLinks } from "../constants";
 import styles from "../style";
 
@@ -41,18 +41,20 @@ const Navbar = () => {
 
       <div className={`flex justify-center items-center py-5`}>
         <a href="/">
-        <img
-          src={Logo}
-          alt="Logo"
-          className={` ${height ? "h-[60px]" : "h-[100px]"}`}
-        /></a>
+          <img
+            src={Logo}
+            alt="Logo"
+            className={` ${height ? "h-[60px]" : "h-[100px]"}`}
+          />
+        </a>
       </div>
 
       <div
-        className={`fixed top-0 left-0  h-full bg-gray-900 w-[350px] bg-opacity-75 transition-all duration-500 transform ${
+        className={`fixed top-0 left-0  h-full bg-gray-600 w-[350px] bg-opacity-75 transition-all duration-500 transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } z-100`}
       >
+        
         <div className="pt-5 flex justify-end">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,19 +72,20 @@ const Navbar = () => {
             />
           </svg>
         </div>
-        <div className="px-5 mt-5 text-white text-[32px]">
+        <a href="/">
+        <img src={logoNav}></img></a>
+        <div className="px-5 mt-5 text-white text-[24px] text-center ">
           <ul>
             {slideLinks.map((nav, index) => (
-              <li key={nav.id}>
-                <a href={`${nav.id}`}>{nav.title}</a>
-              </li>
+              <div className="w-full mb-5 h-[58px] bg-blue-300 rounded-xl ">
+                <li key={nav.id}>
+                  <a href={`${nav.id}`}>{nav.title}</a>
+                </li>
+              </div>
             ))}
           </ul>
-          
         </div>
-        <img src={logoNav} className="flex justify-center items-center py-5 flex-grow"></img>
       </div>
-      
       <div className={`${styles.flexCenter}`}>
         <div className={``}>
           <ul className="flex list-none gap gap-4 pr-5  items-center text-white">
@@ -93,7 +96,6 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        
       </div>
     </nav>
   );

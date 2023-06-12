@@ -2,6 +2,8 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Footer from './Footer';
 import Account from './Account';
+import Error from './Error';
+import BrandCarousel from './BrandCarousel';
 
 import Engine from './categories/engineSys';
 import Chassis from './categories/chassisSys';
@@ -13,15 +15,6 @@ import Exterior from './categories/exteriorSys';
 import Electronics from './categories/electronicsSys';
 import Exhaust from './categories/exhaustSys';
 import Cosmetics from './categories/cosmeticsSys';
-import Error from './Error';
-
-
-
-
-
-
-
-
 
 
 
@@ -34,7 +27,6 @@ export {
     Chassis,
     Brakes,
     Spacers,
-
     Interior,
     Transmission,
     Exterior,
@@ -42,6 +34,7 @@ export {
     Exhaust,
     Cosmetics,
     Error,
+    BrandCarousel
 
 
 }
